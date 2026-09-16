@@ -1,1 +1,654 @@
-<h1> happy </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arceli S. Bersamin - Curriculum Vitae</title>
+
+    <style>
+
+        /* ==============================
+           PAGE / BODY
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: #20252b;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #30465e;
+        }
+
+        .cv {
+            width: 8.27in;
+            min-height: 11.69in;
+            margin: 0 auto;
+            padding: 45px 45px 40px 45px;
+            background-color: white;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        .header {
+            text-align: center;
+        }
+
+        .name {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #294766;
+        }
+
+        .job-title {
+            margin: 8px 0 18px 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #294766;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+            color: #50647a;
+        }
+
+        .contact .divider {
+            font-weight: bold;
+            color: #294766;
+        }
+
+
+        /* ==============================
+           THICK LINE UNDER HEADER
+        ============================== */
+
+        .header-line {
+            height: 14px;
+            background-color: #263847;
+            margin-top: 20px;
+            margin-bottom: 22px;
+        }
+
+
+        /* ==============================
+           GENERAL SECTIONS
+        ============================== */
+
+        .section {
+            border-top: 1px solid #777;
+            padding-top: 14px;
+            margin-top: 14px;
+        }
+
+        .section-title {
+            margin: 0 0 13px 0;
+            font-size: 21px;
+            font-weight: 800;
+            color: #294766;
+        }
+
+
+        /* ==============================
+           PROFILE SUMMARY
+        ============================== */
+
+        .profile-text {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.55;
+            text-align: justify;
+            color: #50647a;
+        }
+
+
+        /* ==============================
+           EXPERIENCE
+        ============================== */
+
+        .experience {
+            margin-bottom: 24px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .position {
+            font-size: 17px;
+            font-weight: bold;
+            color: #294766;
+        }
+
+        .company {
+            font-size: 17px;
+            font-weight: bold;
+            color: #294766;
+            text-align: right;
+        }
+
+        .experience ul {
+            margin: 0;
+            padding-left: 27px;
+        }
+
+        .experience li {
+            margin-bottom: 5px;
+            padding-left: 2px;
+            font-size: 16px;
+            line-height: 1.35;
+            color: #50647a;
+        }
+
+
+        /* ==============================
+           EDUCATION
+        ============================== */
+
+        .education-title {
+            margin-bottom: 7px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #294766;
+        }
+
+        .education-details {
+            font-size: 16px;
+            color: #50647a;
+        }
+
+
+        /* ==============================
+           TWO COLUMN SECTION
+        ============================== */
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid #777;
+        }
+
+        .column {
+            padding-right: 25px;
+        }
+
+        .column + .column {
+            padding-left: 25px;
+            padding-right: 0;
+            border-left: 1px solid #777;
+        }
+
+        .column-title {
+            margin: 0 0 20px 0;
+            font-size: 21px;
+            font-weight: 800;
+            color: #294766;
+        }
+
+
+        /* ==============================
+           CORE COMPETENCIES
+        ============================== */
+
+        .competencies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 15px;
+            font-size: 16px;
+            color: #50647a;
+        }
+
+        .competencies div {
+            line-height: 1.2;
+        }
+
+
+        /* ==============================
+           TECHNICAL SKILLS
+        ============================== */
+
+        .technical-skills {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-size: 16px;
+            color: #50647a;
+        }
+
+
+        /* ==============================
+           LANGUAGES
+        ============================== */
+
+        .languages {
+            margin-top: 20px;
+            padding-top: 14px;
+            border-top: 1px solid #777;
+        }
+
+        .languages-title {
+            margin: 0 0 12px 0;
+            font-size: 21px;
+            font-weight: 800;
+            color: #294766;
+        }
+
+        .languages ul {
+            margin: 0;
+            padding-left: 27px;
+        }
+
+        .languages li {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #50647a;
+        }
+
+
+        /* ==============================
+           PRINT / SAVE AS PDF
+        ============================== */
+
+        @media print {
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .cv {
+                width: 8.27in;
+                min-height: 11.69in;
+                margin: 0;
+                padding: 45px 45px 40px 45px;
+                box-shadow: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+
+        /* ==============================
+           MOBILE RESPONSIVE
+        ============================== */
+
+        @media screen and (max-width: 800px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .cv {
+                width: 100%;
+                min-height: auto;
+                padding: 30px 25px;
+            }
+
+            .name {
+                font-size: 28px;
+            }
+
+            .job-title {
+                font-size: 18px;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .contact .divider {
+                display: none;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .company {
+                text-align: left;
+            }
+
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .column {
+                padding-right: 0;
+            }
+
+            .column + .column {
+                margin-top: 25px;
+                padding-top: 20px;
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid #777;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         CV CONTAINER
+    =========================================== -->
+
+    <div class="cv">
+
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <header class="header">
+
+            <h1 class="name">
+                ARCELI S. BERSAMIN
+            </h1>
+
+            <h2 class="job-title">
+                BUSINESS ANALYST
+            </h2>
+
+            <div class="contact">
+
+                <span>
+                    Dagupan City, Pangasinan
+                </span>
+
+                <span class="divider">
+                    |
+                </span>
+
+                <span>
+                    09639060450
+                </span>
+
+                <span class="divider">
+                    |
+                </span>
+
+                <span>
+                    bersaminarceli@gmail.com
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- THICK DARK LINE -->
+
+        <div class="header-line"></div>
+
+
+        <!-- ==========================================
+             PROFILE SUMMARY
+        =========================================== -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                PROFILE SUMMARY
+            </h2>
+
+            <p class="profile-text">
+                A motivated and adaptable student with good communication and
+                presentation skills. Eager to learn, willing to take on new
+                challenges, and committed to completing tasks responsibly.
+                Dedicated, hardworking, and always striving to improve both
+                personally and professionally.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELEVANT EXPERIENCE
+        =========================================== -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                RELEVANT EXPERIENCE
+            </h2>
+
+
+            <!-- SMART KIDCARE EXPERIENCE -->
+
+            <div class="experience">
+
+                <div class="experience-header">
+
+                    <span class="position">
+                        Project Manager
+                    </span>
+
+                    <span class="company">
+                        Smart KidCare Monitoring System | 2025 – Present
+                    </span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Led the development of a web and mobile-based child
+                        monitoring system for child development workers and
+                        parents.
+                    </li>
+
+                    <li>
+                        Contributed to system analysis, database design,
+                        UI/UX prototyping, and project documentation.
+                    </li>
+
+                    <li>
+                        Managed project timelines, task assignments, and team
+                        collaboration.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- TREASURER EXPERIENCE -->
+
+            <div class="experience">
+
+                <div class="experience-header">
+
+                    <span class="position">
+                        Treasurer
+                    </span>
+
+                    <span class="company">
+                        Data Science Society | 2025 – 2026
+                    </span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Managed the organization's budget, income, and
+                        expenses.
+                    </li>
+
+                    <li>
+                        Collected membership fees and monitored the
+                        organization's funds.
+                    </li>
+
+                    <li>
+                        Ensured transparency and accountability in all
+                        financial transactions.
+                    </li>
+
+                    <li>
+                        Coordinated with officers to support the successful
+                        implementation of events.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EDUCATION
+        =========================================== -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                EDUCATION
+            </h2>
+
+            <div class="education-title">
+                Bachelor of Science in Information Technology
+            </div>
+
+            <div class="education-details">
+                PHINMA University of Pangasinan | 2023 - Current
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CORE COMPETENCIES + TECHNICAL SKILLS
+        =========================================== -->
+
+        <div class="two-columns">
+
+
+            <!-- CORE COMPETENCIES -->
+
+            <div class="column">
+
+                <h2 class="column-title">
+                    CORE COMPETENCIES
+                </h2>
+
+                <div class="competencies">
+
+                    <div>
+                        Adaptability
+                    </div>
+
+                    <div>
+                        Reliable
+                    </div>
+
+                    <div>
+                        Business Process
+                    </div>
+
+                    <div>
+                        Flexible
+                    </div>
+
+                    <div>
+                        Effective Communication
+                    </div>
+
+                    <div>
+                        Trainability
+                    </div>
+
+                    <div>
+                        Teamwork and Collaboration
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TECHNICAL SKILLS -->
+
+            <div class="column">
+
+                <h2 class="column-title">
+                    TECHNICAL SKILLS
+                </h2>
+
+                <div class="technical-skills">
+
+                    <div>
+                        Data Analysis
+                    </div>
+
+                    <div>
+                        Google Workspace
+                    </div>
+
+                    <div>
+                        Microsoft Office Suite
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             LANGUAGES
+        =========================================== -->
+
+        <section class="languages">
+
+            <h2 class="languages-title">
+                LANGUAGES
+            </h2>
+
+            <ul>
+
+                <li>
+                    Filipino
+                </li>
+
+                <li>
+                    English
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </div>
+
+</body>
+</html>
